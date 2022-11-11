@@ -52,7 +52,7 @@ group by c.name
 order by count(*) desc
 limit 1;
 
-select c.name, max(e.date_of_employment)
+select c.name, min(e.date_of_employment)
 from users as u
          join docker.employees e on u.id = e.user_id
          join docker.companies c on c.id = e.company_id
